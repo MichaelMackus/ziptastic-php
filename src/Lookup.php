@@ -5,7 +5,7 @@ use Ziptastic\Ziptastic\Service\ServiceInterface;
 
 class Lookup
 {
-    const ZIPTASTIC_LOOKUP_URL = 'https://zip.getziptastic.com/v3/%s/%d';
+    const ZIPTASTIC_LOOKUP_URL = 'https://zip.getziptastic.com/v3/%s/%s';
 
     /**
      * @var ServiceInterface;
@@ -42,7 +42,7 @@ class Lookup
 
     /**
      * Get information on given $zipCode
-     * @param  int                $zipCode
+     * @param  int|string       $zipCode
      * @return array[LookupModel]
      */
     public function lookup($zipCode)
